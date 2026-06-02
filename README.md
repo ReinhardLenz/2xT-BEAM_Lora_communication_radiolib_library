@@ -100,14 +100,16 @@ Both programs use the **RadioLib** library to control the **SX1262 LoRa radio** 
 	Build & Flash (PlatformIO)
 
 ## Prerequisites
-- ✅ Install VS Code
+- Install VS Code
 - ✅ Install the PlatformIO extension
-- ✅ Connect your T-Beam via USB (CH9102 driver may be required depending on your OS)
-- ✅ Compile & Upload
-- ✅ Open the sender project and run:
-- ✅ Build
-- ✅ Upload
-- ✅ Monitor (Serial Monitor at 115200 baud)
+- Connect your T-Beam via USB (CH9102 driver may be required depending on your OS)
+- Compile & Upload
+- Platform IO requires, that the main program is named main.cpp, and any other file with the suffix .cpp will be used when compiling code. Therefore, when compiling and uploading the program for sender, the file main_sender.cpp must be renamed to main.cpp, and the file main_receive.cpp must be renamed to  main_receive.xxx. Then, after the sender program has been compiled and uploaded, vice versa, the main_sender.cpp must be renamed to main_sender.xxx and the main_receive.cpp must be renamed to main.cpp.
+   
+- Open the sender project and run:
+- Build
+- Upload
+- Monitor (Serial Monitor at 115200 baud)
 -Repeat for the receiver project.
 
 -Serial Monitor Settings
@@ -116,15 +118,15 @@ Both programs use the **RadioLib** library to control the **SX1262 LoRa radio** 
 ## Sender output example:
 
 -SX126x Sender starting...
--	✅ Radio init OK
+-	Radio init OK
 -	Sending: hello
--	✅ TX success
+-	TX success
 -	Receiver output example:
 
 -	SX126x Receiver starting...
--	✅ Radio init OK
+-	Radio init OK
 -	Listening...
--	✅ RX: hello
+-	RX: hello
 -	RSSI: -xx dBm, SNR: x.x dB
 
 ## Usage
@@ -142,14 +144,14 @@ Both programs use the **RadioLib** library to control the **SX1262 LoRa radio** 
 -	Verify correct SX1262 pin mapping (RST/BUSY/DIO1/NSS)
 
 ## Future Improvements
--	✅ Add a real ACK (acknowledgement) message:
+-	Add a real ACK (acknowledgement) message:
 -	Receiver sends back “ACK”
 -	Sender waits for ACK and retries if not received
--	✅ Add message counters and timestamps
--	✅ Add configurable LoRa parameters (SF/BW/CR) via #define or Serial commands
--	✅ Add encryption/authentication (basic integrity protection)
--	✅ Add deep sleep for low-power battery operation
--	✅ Add structured payloads (JSON or binary packets)
+-	Add message counters and timestamps
+-	Add configurable LoRa parameters (SF/BW/CR) via #define or Serial commands
+-	Add encryption/authentication (basic integrity protection)
+-	Add deep sleep for low-power battery operation
+-	Add structured payloads (JSON or binary packets)
 ## Acknowledgements
 -	RadioLib library by Jan Gromeš and contributors
 -	LILYGO for the T-Beam hardware platform
