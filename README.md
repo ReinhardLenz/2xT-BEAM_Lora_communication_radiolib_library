@@ -100,62 +100,61 @@ Both programs use the **RadioLib** library to control the **SX1262 LoRa radio** 
 	Build & Flash (PlatformIO)
 
 ## Prerequisites
-	Install VS Code
-	Install the PlatformIO extension
-	Connect your T-Beam via USB (CH9102 driver may be required depending on your OS)
-	Compile & Upload
-	Open the sender project and run:
+- ✅ Install VS Code
+- ✅ Install the PlatformIO extension
+- ✅ Connect your T-Beam via USB (CH9102 driver may be required depending on your OS)
+- ✅ Compile & Upload
+- ✅ Open the sender project and run:
+- ✅ Build
+- ✅ Upload
+- ✅ Monitor (Serial Monitor at 115200 baud)
+-Repeat for the receiver project.
 
-	Build
-	Upload
-	Monitor (Serial Monitor at 115200 baud)
-	Repeat for the receiver project.
-
-	Serial Monitor Settings
-	Baud rate: 115200
+-Serial Monitor Settings
+-Baud rate: 115200
 
 ## Sender output example:
 
-	SX126x Sender starting...
-	✅ Radio init OK
-	Sending: hello
-	✅ TX success
-	Receiver output example:
+-SX126x Sender starting...
+-	✅ Radio init OK
+-	Sending: hello
+-	✅ TX success
+-	Receiver output example:
 
-	SX126x Receiver starting...
-	✅ Radio init OK
-	Listening...
-	✅ RX: hello
-	RSSI: -xx dBm, SNR: x.x dB
+-	SX126x Receiver starting...
+-	✅ Radio init OK
+-	Listening...
+-	✅ RX: hello
+-	RSSI: -xx dBm, SNR: x.x dB
 
 ## Usage
-	Flash Receiver firmware to one T-Beam.
-	Flash Sender firmware to the other T-Beam.
-	Power both devices (USB or battery).
-	Open serial monitors:
-	Receiver should print "hello" whenever it receives a packet.
-	Sender should report successful transmissions.
-	If you see TX success but no RX:
+-	Flash Receiver firmware to one T-Beam.
+-	Flash Sender firmware to the other T-Beam.
+-	Power both devices (USB or battery).
+-	Open serial monitors:
+-	Receiver should print "hello" whenever it receives a packet.
+-	Sender should report successful transmissions.
+-	If you see TX success but no RX:
 
-	Ensure both use the same frequency (868.0)
-	Ensure LoRa parameters match (SF/BW/CR if you set them)
-	Verify antenna is connected
-	Verify correct SX1262 pin mapping (RST/BUSY/DIO1/NSS)
+-	Ensure both use the same frequency (868.0)
+-	Ensure LoRa parameters match (SF/BW/CR if you set them)
+-	Verify antenna is connected
+-	Verify correct SX1262 pin mapping (RST/BUSY/DIO1/NSS)
 
 ## Future Improvements
-	✅ Add a real ACK (acknowledgement) message:
-	Receiver sends back “ACK”
-	Sender waits for ACK and retries if not received
-	✅ Add message counters and timestamps
-	✅ Add configurable LoRa parameters (SF/BW/CR) via #define or Serial commands
-	✅ Add encryption/authentication (basic integrity protection)
-	✅ Add deep sleep for low-power battery operation
-	✅ Add structured payloads (JSON or binary packets)
+-	✅ Add a real ACK (acknowledgement) message:
+-	Receiver sends back “ACK”
+-	Sender waits for ACK and retries if not received
+-	✅ Add message counters and timestamps
+-	✅ Add configurable LoRa parameters (SF/BW/CR) via #define or Serial commands
+-	✅ Add encryption/authentication (basic integrity protection)
+-	✅ Add deep sleep for low-power battery operation
+-	✅ Add structured payloads (JSON or binary packets)
 ## Acknowledgements
-	RadioLib library by Jan Gromeš and contributors
-	LILYGO for the T-Beam hardware platform
+-	RadioLib library by Jan Gromeš and contributors
+-	LILYGO for the T-Beam hardware platform
 ## License
-	This project is licensed under the MIT License. See the LICENSE file for details.
+-	This project is licensed under the MIT License. See the LICENSE file for details.
 
 
 ![Diagram](images/circuit_image.png)
