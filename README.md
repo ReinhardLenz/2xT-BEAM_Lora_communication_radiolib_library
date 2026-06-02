@@ -156,6 +156,13 @@ Both programs use the **RadioLib** library to control the **SX1262 LoRa radio** 
 ## License
 -	This project is licensed under the MIT License. See the LICENSE file for details.
 
+## Images
+1. 
+![Diagram](images/photo.jpg)
+2. 
+![Diagram](images/dimensions.jpg)
+3.
 
-![Diagram](images/circuit_image.png)
+![Diagram](images/el-pin-meanings.jpg)
+
 
