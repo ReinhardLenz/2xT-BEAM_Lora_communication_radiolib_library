@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include <RadioLib.h>
 #include <SPI.h>
+#include <TinyGPS++.h>
+
 // --------------------
 // ⚠️ Adjust these pins!
 // --------------------
