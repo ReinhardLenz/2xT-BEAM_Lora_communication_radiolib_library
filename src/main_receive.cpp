@@ -1,10 +1,12 @@
 #include <Arduino.h>
+//#include <modules\SX126x\SX1262.h>
 #include <RadioLib.h>
 #include <SPI.h>
 #include <TinyGPS++.h>
+#include <SoftwareSerial.h>
 
 // --------------------
-// ⚠️ Adjust these pins!
+// ⚠️  T- BEAM pins
 // --------------------
 static const int LORA_NSS  = 18;   // CS
 static const int LORA_DIO1 = 33;   // DIO1 (IRQ)
